@@ -1,0 +1,93 @@
+FIRE DETECTION SYSTEM USING DEEP LEARNING
+
+Sathwika Barakam
+Trine University
+sbarakam23@my.trine.edu
+
+
+
+Abstract- Fire is an abnormal event which can cause significant damage to lives and property. According to a research in 2019, as many as 13,521 people have lost their lives in fire accidents, which means that around 37 Indians die in a fire every day. Incidents such as fires in Carlton Towers, Mumbai's Kamala Mills fire (Dec 29, 2017), Delhi's Karol Bagh fire (Feb 12, 2019), Bandipur forest fire (Feb 21, 2019) etc. have led to dramatic loss of human lives. In this project, a deep learning-based fire detection method is proposed by implementing VGG-16 and ResNet50 models which use a video sequence to detect and prevent the spread of such unforeseen fire accidents. The existing systems are based on smoke or heat sensors to detect fires. But these systems require proximity for activation and thus limits the area of coverage to small extents. The amount of smoke present may be insufficient to alarm smoke detectors, and smoke detectors are subject to false alarms and nuisance alarms. For example, a smoke detector located in or near a kitchen may go into a nuisance alarm during normal operation of kitchen appliances. To overcome these limitations, the proposed deep learning based system can be implemented which helps in detecting fire at the early stages. This system gives larger surveillance coverage and offers the advantage of less human intervention with a faster response, as a fire can be confirmed without requiring a visit to the fire location. It can be used for real-time video surveillance at residential, industrial, public and business locations as it generates an alarm if fire is detected, thereby helping in taking safety measures and minimizing the damage. The data set used for training and validation of this model consists of 7689 images which are extracted from several sources on the internet. The accuracy achieved by implementing the ResNet50 model is 94%, and is higher than the accuracy achieved by the VGG-16 model.
+
+
+Index Terms- Deep learning, fire detection, ResNet50, VGG-16. 
+
+Introduction
+Accidental fire is a natural disaster that seriously threatens public safety. In recent years, accidental fire has frequently occurred in many places, including superstores, communities and forests, yielding huge losses to production and human life. Several fire incidents over the past few years have led to dramatic loss of human lives. Such unwanted fires cause many disasters. It has been found in a survey that 80% losses caused due to fire would have been kept away from if the fire was identified promptly. Thus, fire detection is an important phenomenon to save human life. The main purpose of this project is to provide prompt response for fire accidents and prevent dramatic losses of lives and property. This system can be used for real-time video surveillance at residential, industrial, public and business locations to identify fires and send hazard information to the concerned authority to take the necessary actions as soon as possible. By using this system, fire accidents can be detected without the need of any human intervention. In case fire has been detected, an outbound voice call will be made to the concerned authority to inform of the fire accident, and an alarm will be generated in the premises. Also, the predictions will be written on the video output along with the probability values which can serve as a proof of occurrence of fire in that frame. This project developed a powerful cost-efficient approach that can be used for the protection of cultural heritage providing high reliability, early detection of fire. It features high reliability by using CCTV cameras and provides early detection of fire. It can be used for protection of archaeological sites through non-destructive and non-intrusive intervention. Taking into account the technological benefits of the developed technology, this project is expected to significantly contribute to the protection of forested areas and the safeguarding of cultural heritage, particularly monuments and open archaeological sites. Forest fires cause adverse ecological, economic and social impacts such as life casualties and loss of properties, loss of biodiversity and extinction of plants and animals, loss of wildlife habitat and depletion of wildlife. Moreover, the proposed system can be used in other sensitive areas and/or villages and towns located next to forests. As a result, this project is expected to provide significant societal and economic benefits. Specific appropriate actions when taken while facing forest fires can result in better management of resources and reduced loss of forested area. Thus we can reduce losses for natural hazards and prevent man-made hazards (forest arsons) from happening and also contribute to the protection of cultural heritage by using this project.
+RELATED WORKS
+
+Most of the fire detection systems proposed in the literature are focused on coal mines and forests due to the high ignition risk in coal mines and wide spreadable fires in the woods. These systems are of two kinds: sensor based and computer vision based. 
+The computer vision based systems perform much better than the traditional sensor based systems for numerous reasons: sensors require close proximity for activation, they are not  well suited  to critical environments and need human involvement to confirm a fire in the case of an alarm, and such systems cannot usually provide information about  the size,  location,  and  burning degree  of  the  fire. To overcome these  limitations,  numerous  vision  sensor-based methods  have  been  explored  by  researchers  in  this  field. These systems have the advantages of less human interference, faster  response,  affordable  cost,  and  larger  surveillance coverage. In addition, such systems can confirm a fire without requiring a visit to the fire’s location, and can provide detailed information about  the  fire  including  its  location,  size,  and degree, etc. Despite these advantages, there are still some issues with these systems, e.g. the complexity of the scenes under observation, irregular lighting, and low-quality frames. Researchers have made several efforts to address these aspects, taking into consideration both color and motion features. Video fire detection technology mainly monitors the flames or smoke generated by combustion. However, flame, especially visible burning flame, is an inevitable  outcome of  combustion,  while  smoke  is  only  a  gasification phenomenon  of  light  and  heat;  thus,  smoke  may  not  be generated by combustion. Color information is a key factor in fire detection, and the existing mature color models include RGB and YCBCR. Also, flame has more significant and stable features than smoke to fire detection; thus, studies have focused mainly on how to recognize fires based on flame features.
+This project implements two pre-trained deep learning models: VGG-16 and ResNet50.
+EXISTING SYSTEMS
+
+Burak Karaduman, et al. proposed an approach  “ContikiOS Based Library Fire Detection System”  [3]. Their system consists of 5 main blocks and each block consists of sub-blocks. These blocks are: source nodes, sink node, RaspberryPI, a Java application and a database used to store all source node’s values. ESP8266 is coded in C/C++ via Arduino Core used to measure indoor temperature with DHT11 sensor. An application is coded in Java and run in RaspberryPI to store and compare the indoor and outdoor temperature values. For sending data to the sink node, star topology was selected. The sink node collects all data and sends it to RaspberryPI via a serial connection. In Java application, first it connects a website to gather 5 days forecast by API and saves gathered data in the database. Java Application compares indoor, outdoor and room temperature values. If any indoor temperature rising occurs, it triggers the alarm. In their system IRIS sensor nodes are used. Seven of these nodes are assigned to sense environmental data, including light and temperature. The remainder node acts as a base station and is positioned in the neighborhood of the geometrical center of the sensor nodes. According to the test results, their system responds to the changes in temperature and prompts a warning/alarm message in approximately 4 seconds. The results show that a larger amount of data losses occurs for the sensor nodes that are positioned far away from the base station. Sensors require proximity for activation, and thus limit the area of coverage to small extents. The amount of smoke or fire present may be insufficient to alarm the detectors, and are also subject to false alarms.
+
+Khan Muhammad, et al. proposed an approach “Efficient Deep CNN-Based Fire Detection and Localization in Video Surveillance Applications” [2]. In their system, they train and fine-tune an AlexNet architecture for fire detection  using  a  transfer  learning  strategy.  This model outperformed  conventional  hand-engineered  features  based fire  detection  methods.  But  the  model  remains comparatively  large  in  size  (238  MB),  making  its implementation difficult in resource-constrained equipment. To reduce the size of the model, they fine-tune a model with a similar  architecture  to  the  SqueezeNet  model  for  fire detection  at  the  early  stages.  The  size  of the  model  was reduced from 238 MB to 3 MB, thus saving an extra space of 235  MB,  which led to  minimizing  the  cost  and  making  its implementation more feasible in surveillance networks. This model requires 0.72 GFLOPS/image compared to AlexNet, whose computational  complexity  is  2 GFLOPS/image.  This made their  proposed  model  more efficient in terms of inference, allowing it to process multiple surveillance streams. An intelligent feature map selection algorithm has been proposed to choose  appropriate  feature  maps  from  the  convolutional layers of the trained CNN, which are sensitive to fire regions. These feature maps allowed more accurate segmentation of fire  compared  to  other  hand-crafted  methods. Their system reported an accuracy of 93.55%. The accuracy of this approach is higher than that of the previous methods. However, the number of false alarms was still high (11.67%) which could be problematic for fire brigades and 
+disaster management teams, also the accuracy of fire detection can be further improved.
+
+
+IMPLEMENTATION 
+
+FLOWCHART OF PROPOSED SYSTEM
+
+The flowchart of the proposed system is as illustrated in Fig. 7. 
+
+Fig. 7: Flowchart of the proposed system
+CONCLUSION
+
+The embedded processing capabilities of smart cameras have given rise to intelligent  CCTV surveillance  systems. Various abnormal events such as accidents, medical emergencies, and fires can be detected using these smart cameras. Of these, fire is the most dangerous abnormal event, as failing to control it at an early  stage  can  result  in  huge  disasters,  leading  to  human, ecological and economic losses. The proposed comparative study between VGG-16 and ResNet50 models has enabled us to determine the better solution among the two for detecting fires. This deep learning based system gives larger surveillance coverage and offers the advantage of less human intervention with a faster response, as a fire can be confirmed without requiring a visit to the fire location. 
+The limitation of this system is that it requires good quality CCTV footage, or  it may lead to generation of false alarms. In this project, we have worked on fire detection and reporting. But the ability of this system can be extended to report the exact geo location of the premises to the fire department by  using GPS based location tracking system which is able to collect location information and send it through SMS. Using this information, firefighters can reach their targets faster and reduce the damage to a greater extent. This system can further be extended to activate water pipe networks for watering, like the fire sprinkler in buildings. Such water pipe networks should usually be organized in sectors, which can timely and separately be activated in the areas threatened by fire.
+
+
+
+
+
+
+REFERENCES
+
+ [1] X. Huang and L. Du, "Fire Detection and Recognition Optimization Based on Virtual Reality Video Image," in IEEE Access, vol. 8, pp. 77951-77961, April, 2020.
+
+[2] K. Muhammad, J. Ahmad, Z. Lv, P. Bellavista, P. Yang and S. W. Baik, "Efficient Deep CNN-Based Fire Detection and Localization in Video Surveillance Applications," in IEEE Transactions on Systems, Man, and Cybernetics: Systems, vol. 49, no. 7, pp. 1419-1434, July 2019.
+
+[3] B. Karaduman, M. Challenger and R. Eslampanah, "ContikiOS based library fire detection system," 2018 5th International Conference on Electrical and Electronic Engineering (ICEEE), pp. 247-251, May 2018.
+
+[4] A. Mahgoub, N. Tarrad, R. Elsherif, A. Al-Ali and L. Ismail, "IoT-Based Fire Alarm System," 2019 Third World Conference on Smart Trends in Systems Security and Sustainability (WorldS4), pp. 162-166, July 2019.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
